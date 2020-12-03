@@ -3,8 +3,9 @@ let Alumni = require('../models/alumniModel');
 
 //create a new mentor in database
 const createAlumni = async (req, res) =>{
-    const { body } = req;
+    // const { fullName, phonenumbe } = req.body;
     const alumnus = new Alumni(body);
+    console.log(body)
     await alumnus.save();
     return res.status(201).send(alumnus)
 };
@@ -37,14 +38,17 @@ const updateAlumni = async (req, res) => {
 const loginAlumni = async (req, res) =>{
   try{
       const {email, password} = req.body;
-      const alumni = await Alumni.findByCreditials(email, password);
+      const alumni = await Alumni.findOne(email, password);
+    //   const alumni = await Alumni.findByCreditials(email, password);
       if(!alumni){
           return res.status(401).send({error: "Login failed. Check authentication credentials"})
       }
       const token = await Alumni.generateAuthToken();
-      res.send({alumni, token});
-  } catch(error) {
+      res.json({alumni, token});
+      console.log(alumni);
+  } catch(error) { 
       res.status(400).send(error);
+      console.log(error);
   }
 };
 

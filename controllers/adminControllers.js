@@ -3,15 +3,23 @@ let Admin = require('../models/adminModel');
 
 //create a new admin in database
 const createAdmin = async (req, res) =>{
+    console.log(req.body)
     try{
-        const { body } = req;
-        const admin = new Admin(body);
-        await admin.save();
+        const { fullName, phoneNumber, email, password } = req.body;
+        const admin = new Admin({
+            fullName,
+            phoneNumber,
+            email,
+            password
+        });
+        const res = await admin.save();
         const token = await admin.generateAuthToken();
         return res.status(201).send({admin, token})
 
     } catch (error) {
         res.status(400).send(error);
+        console.log(error)
+        console.log(req.body)
     }
     
 };
