@@ -1,5 +1,7 @@
 let mongoose = require('mongoose');
-// let validator = require('validator');
+let validator = require('validator');
+let bcrypt = require('bcryptjs');
+let jwt = require('jsonwebtoken');
 
 const MentorSchema = mongoose.Schema({
     fullName: {

@@ -36,7 +36,8 @@ app.use(bodyParser.json());
 const dbPath = 'mongodb://localhost:27017/code-queen-db';
 const options = {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true
 }
 const mongo = mongoose.connect(dbPath, options);
 
