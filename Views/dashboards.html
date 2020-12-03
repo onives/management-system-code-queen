@@ -1,0 +1,68 @@
+<!-- e – we will have explanations/description of the prime elements after the code,
+<!DOCTYPE html >  
+ <html >  
+ <head >  
+ <metacharset = "utf-8" / >  
+ <metahttp - equiv = "X-UA-Compatible"  
+content = "IE=edge" >  
+ <title > Chart JS Demo < /title>     
+ <scripttype = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" > < /script>   <  
+ scripttype = "text/javascript"  
+src = "https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js" > < /script>   <  
+ linkrel = "stylesheet"  
+href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" / >  
+ 
+ <script >  
+   
+ functionGenerateChart() {  
+  myLabels = ['Cohort 1', 'cohort 2', 'cohort 3'];  
+  myData = [15, 20, 25];  
+  
+  varctx = document.getElementById('myChartContainer').getContext('2d');  
+  varmyChart = newChart(ctx, {  
+   type: 'horizontalBar', // bar, horizontalBar, pie , line, doughnut, radar, polarArea    
+   data: {  
+    labels: myLabels,  
+    datasets: [{  
+     label: 'Number of Students',  
+     data: myData,  
+     backgroundColor: ['green', 'red', 'blue'],  
+     borderWidth: 1,  
+     borderColor: 'black',  
+     hoverBorderWidth: 3,  
+     hoverBorderColor: 'black',  
+    }]  
+   },  
+   options: {  
+    maintainAspectRatio: true,  
+    title: {  
+     display: true,  
+     text: 'Students per Cohort',  
+     fontSize: 20  
+    },  
+    legend: {  
+     display: true,  
+     position: 'right',  
+     labels: {  
+      fontColor: '#000',  
+     }  
+    },  
+    tooltips: {  
+     enabled: true  
+    }  
+   }  
+  });  
+ }   
+ </script>    
+ </head>     
+ <body >  
+ This space is reserved  
+for my Chart JS graphs! < br > < br >  
+ <buttononclick = "GenerateChart()" > Generate Chart < /button><br><br>    
+  
+ <divstyle = "position: relative; height:800px; width:800px" >  
+ <canvasid = "myChartContainer"  
+style = "border:1px solid" > < /canvas>  
+ </div>     
+ </body>     
+ </html>    -->
