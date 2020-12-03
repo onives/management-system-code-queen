@@ -8,10 +8,11 @@ let systemRoutes = require('./routes/systemRoutes');
 let app = express();
 
 //use API routes in the app
-// app.use('/alumni', systemRoutes);
-// app.use('/admin', systemRoutes);
-// app.use('/students', systemRoutes);
-app.use(systemRoutes);
+app.use('/alumni', systemRoutes);
+app.use('/admin', systemRoutes);
+app.use('/students', systemRoutes);
+app.use('/mentor', systemRoutes);
+// app.use(systemRoutes);
 
 //assign port 
 var port = process.env.PORT || 8080;

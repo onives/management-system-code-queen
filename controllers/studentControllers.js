@@ -3,7 +3,7 @@ let Student = require('../models/studentModel');
 
 //create a new mentor in database
 const createStudent = async (req, res) =>{
-    const { body } = req;
+    const { body } = req.body;
     const student = new Alumni(body);
     await student.save();
     return res.status(201).send(student)

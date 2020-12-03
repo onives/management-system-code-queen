@@ -3,7 +3,7 @@ let Mentor = require('../models/mentorModel');
 
 //create a new mentor in database
 const createMentor = async (req, res) =>{
-    const { body } = req;
+    const { body } = req.body;
     const mentor = new Mentor(body);
     await mentor.save();
     return res.status(201).send(mentor)
