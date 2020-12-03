@@ -32,5 +32,21 @@ const updateAlumni = async (req, res) => {
     });
 };
 
+//login registered alumni
 
-module.exports = { createAlumni, fetchAllAlumni, updateAlumni };
+const loginAlumni = async (req, res) =>{
+  try{
+      const {email, password} = req.body;
+      const alumni = await Alumni.findByCreditials(email, password);
+      if(!alumni){
+          return res.status(401).send({error: "Login failed. Check authentication credentials"})
+      }
+      const token = await Alumni.generateAuthToken();
+      res.send({alumni, token});
+  } catch(error) {
+      res.status(400).send(error);
+  }
+};
+
+
+module.exports = { createAlumni, fetchAllAlumni, updateAlumni, loginAlumni };

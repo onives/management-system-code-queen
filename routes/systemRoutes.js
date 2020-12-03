@@ -1,8 +1,8 @@
 //intitialize express router
 let router = require('express').Router();
 //import controllers
-let { createAlumni, fetchAllAlumni, updateAlumni} = require("../controllers/alumniControllers");
-let createAdmin = require('../controllers/adminControllers');
+let { createAlumni, fetchAllAlumni, updateAlumni, loginAlumni} = require("../controllers/alumniControllers");
+let {createAdmin, loginAdmin } = require('../controllers/adminControllers');
 let { createStudent, fetchAllStudents, deleteStudent, updateStudent } = require("../controllers/studentControllers");
 let { createMentor, fetchAllMentors, deleteMentor, updateMentor } = require("../controllers/mentorController");
 
@@ -16,11 +16,14 @@ router.get('/', function(req, res){
 
 //set up routes for alumni
 router.post("/alumni", createAlumni);
+router.post("/alumni/login", loginAlumni);
 router.get("/alumni", fetchAllAlumni);
 router.patch("/alumni/:id", updateAlumni);
 
+
 //routes for admin
 router.post("/admin", createAdmin);
+router.post("/admin/login", loginAdmin);
 
 //routes for student
 router.post("/students", createStudent);

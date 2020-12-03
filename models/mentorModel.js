@@ -1,12 +1,11 @@
 let mongoose = require('mongoose');
 let validator = require('validator');
-let bcrypt = require('bcryptjs');
-let jwt = require('jsonwebtoken');
 
 const MentorSchema = mongoose.Schema({
     fullName: {
         type: String,
-        required: true
+        required: true,
+        trim: true
     },
     phoneNumber: {
         type: Number,
@@ -21,7 +20,14 @@ const MentorSchema = mongoose.Schema({
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true,
+        lowercase: true,
+        validate: value =>{
+            if(!validator.isEmail(value)){
+                throw new Error ({error: 'Invalid email address'})
+            }
+        }
     },
     profilePicture: Buffer,
     created: {
