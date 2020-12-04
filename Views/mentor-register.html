@@ -9,51 +9,94 @@
     <title>Admin Registration</title>
 </head>
 <body>
-<div class="container">
-    <h1>MENTOR REGISTRATION</h1>
+  <div class="row"> 
+    <div class="wrapper col-md-2">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+          <div class="sidebar-header">
+              <img src="./codequeen-logo.png" id="codelogo" alt="code queen logo">
+          </div>
 
-    <div class="form">
-        <form action="/action_page.php">
-            <div class="form-group">
-              <label for="full name">Full Name:</label>
-              <input type="text" class="form-control" placeholder="" id="full-name">
-            </div>
-            <div class="form-group">
-                <label for="email">Occupation:</label>
-                <input type="text" class="form-control" placeholder="" id="occupation">
-            </div>
-            <div class="form-group">
-                <label for="cohort">Telephone number:</label>
-                <input type="number" class="form-control" placeholder="" id="">
-            </div>
-            <div class="form-group">
-              <label for="pwd"> Email:</label>
-              <input type="email" class="form-control" placeholder="" id="email">
-            </div>
-
-            <div class="form-group form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="checkbox"> Remember me
-              </label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-
+          <ul class="list-unstyled components">
+              <li class="active">
+                <a href="index.html">Dashboard</a>
+              </li>
+              <li>
+                  <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Students</a>
+                  <ul class="collapse list-unstyled" id="homeSubmenu">
+                      <li>
+                          <a href="student-register.html">Register Student</a>
+                      </li>
+                      <li>
+                          <a href="Student-table.html">All Students</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Mentors</a>
+                  <ul class="collapse list-unstyled" id="pageSubmenu">
+                      <li>
+                          <a href="mentor-register.html">Register Mentor</a>
+                      </li>
+                      <li>
+                          <a href="mentor-table.html">All Mentors</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                <a href="#jobSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Job board</a>
+                <ul class="collapse list-unstyled" id="jobSubmenu">
+                    <li>
+                        <a href="job-posting.html">Post a job</a>
+                    </li>
+                </ul>
+            </li>
+              <li>
+                  <a href="#">View Admin Profile</a>
+              </li>
+              <li>
+                  <a href="#">Manage Users</a>
+              </li>
+          </ul>
+      </nav>
     </div>
 
+    <div class="container col-md-10">
+      <div class="container">
+        <h1 class="text-center">MENTOR REGISTRATION</h1>
+        <div class="form">
+            <form action="/action_page.php">
+                <div class="form-group">
+                  <label for="full name">Full Name:</label>
+                  <input type="text" class="form-control" placeholder="" id="full-name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Occupation:</label>
+                    <input type="text" class="form-control" placeholder="" id="occupation">
+                </div>
+                <div class="form-group">
+                    <label for="cohort">Telephone number:</label>
+                    <input type="number" class="form-control" placeholder="" id="">
+                </div>
+                <div class="form-group">
+                  <label for="pwd"> Email:</label>
+                  <input type="email" class="form-control" placeholder="" id="email">
+                </div>
+    
+                <div class="form-group form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox"> Remember me
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+    
+        </div>
+      </div>
+    </div>
 
+  </div>
 
-
-
-
-
-
-
-
-
-
-
-</div>
 
 
 
