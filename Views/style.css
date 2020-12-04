@@ -129,10 +129,9 @@ body{
     padding-right: 8px;
   }
   .form{
-      width: 60%;
+      width: 80%;
       margin: auto;
       margin-top: 50px;  
-      margin-right: 60px;
   }
 
   /* charts */
@@ -285,4 +284,16 @@ body{
   margin-left: 20px;
   color: #F3AC3A;
 }
-  
+.table{
+  width: 95%;
+  margin: auto;
+  margin-top: 50px;
+}
+.table-div{
+  margin-top: 30px;
+}
+.job-div{
+  width: 98;
+  margin: auto;
+
+}
