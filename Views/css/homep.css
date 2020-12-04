@@ -1,0 +1,83 @@
+body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    /*background:url(tyb.png) no-repeat;*/
+    background-color:#fff;
+}
+
+
+
+.text-white{
+    position: relative;
+    color: black;
+    font-family: italic;
+    font-size: small;
+    text-align: center;
+    left: 80px;
+}
+
+
+
+.img{
+    position: relative;
+    margin: 20px;
+    height: 300px;
+    width:300px;
+    border-radius: 50%;
+    left: 30%;
+   
+    
+    
+   
+}
+.h3{
+    position: relative;
+    color: black;
+    font-family: italic;
+    font-size: large;
+    text-align: center;
+    left: 80px;
+  
+    
+     
+}
+.pic {
+ position: relative;
+ height: 140px;
+ width: 150px;
+padding: 10px;
+    border-radius: 50%;
+    left: 300px;
+}
+
+.h2{
+    position: relative;
+    left: 200px;
+    text-align: center;
+}
+.h1{
+    position: relative;
+    margin: 10px;
+    left: 80px;
+    top: 20px;
+    text-align: center;
+}
+.va {
+    position: relative;
+    margin: 30px;
+    text-align: center;  
+    left: 200px;
+}
+.container {
+    width: auto;
+    position: absolute;
+   margin:20px;
+   height: 750px;
+   display: block;
+   left: 10%;
+   border-radius: 20px;
+   box-shadow: 1px 1px 3px 0px black;
+}
+
+
